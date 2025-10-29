@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+    "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+    "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+<suppressions>
+    <suppress files="JSONLWriter.java" checks="AbbreviationAsWordInName"/>
+    <suppress files="CSVWriter.java" checks="AbbreviationAsWordInName"/>
+    <suppress files="ScraperCli.java" lines="206" checks="LineLength"/>
+</suppressions>
