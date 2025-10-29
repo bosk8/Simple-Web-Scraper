@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     
     steps:
@@ -26,8 +26,8 @@ jobs:
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
         
-    - name: Run tests
-      run: mvn clean test
+    - name: Run tests and static analysis
+      run: mvn clean verify
       
     - name: Build project
       run: mvn clean package

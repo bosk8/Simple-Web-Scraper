@@ -135,8 +135,8 @@ src/
 ### Building
 
 ```bash
-# Compile and test
-mvn clean compile test
+# Compile, test, and run static analysis
+mvn clean verify
 
 # Create executable JAR
 mvn clean package
@@ -157,6 +157,20 @@ Run all tests:
 ```bash
 mvn test
 ```
+
+### Static Analysis
+
+This project uses Checkstyle and SpotBugs to enforce code quality and find potential bugs.
+
+- **Checkstyle**: Enforces a consistent coding style based on the Google Java Style Guide.
+- **SpotBugs**: Performs static analysis to find common bug patterns.
+
+To run the static analysis checks:
+```bash
+mvn verify
+```
+
+The build will fail if any Checkstyle or SpotBugs violations are found.
 
 ## Troubleshooting
 
@@ -192,7 +206,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=debug \
 2. Create a feature branch
 3. Make your changes
 4. Add tests for new functionality
-5. Ensure all tests pass
+5. Ensure all tests and static analysis checks pass
 6. Submit a pull request
 
 ## License
