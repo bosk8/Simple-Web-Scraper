@@ -1,0 +1,17 @@
+{
+  "startUrls": [
+    "https://example.com/products",
+    "https://example.com/categories"
+  ],
+  "selectors": {
+    "container": "article, .item, .product, .post",
+    "title": "h1, h2, h3, .title, .name",
+    "description": "p, .description, .summary",
+    "url": "a",
+    "price": ".price, .cost",
+    "image": "img"
+  },
+  "rateLimitMs": 2000,
+  "userAgent": "SimpleWebScraper/1.0 (mailto:your-email@example.com)",
+  "respectRobots": true
+}

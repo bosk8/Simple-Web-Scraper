@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Crawl-delay: 2
+
+User-agent: SimpleWebScraper
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 1
+
+User-agent: BadBot
+Disallow: /
