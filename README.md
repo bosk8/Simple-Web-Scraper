@@ -158,6 +158,24 @@ Run all tests:
 mvn test
 ```
 
+### Code Quality
+
+The project uses automated code quality checks:
+
+- **Checkstyle**: Code style and formatting checks
+- **Compiler Warnings**: Enabled deprecation and unchecked warnings
+
+Run code quality checks:
+```bash
+# Run Checkstyle
+mvn checkstyle:check
+
+# Compile with warnings enabled
+mvn clean compile
+```
+
+Code quality checks are automatically run in CI/CD pipelines.
+
 ## Troubleshooting
 
 ### Common Issues
@@ -192,8 +210,17 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=debug \
 2. Create a feature branch
 3. Make your changes
 4. Add tests for new functionality
-5. Ensure all tests pass
-6. Submit a pull request
+5. Ensure all tests pass (`mvn test`)
+6. Run code quality checks (`mvn checkstyle:check`)
+7. Submit a pull request
+
+### Code Style
+
+- Follow Java naming conventions
+- Use meaningful variable and method names
+- Add Javadoc comments for public APIs
+- Keep methods focused and concise
+- Format code according to Checkstyle rules
 
 ## License
 
