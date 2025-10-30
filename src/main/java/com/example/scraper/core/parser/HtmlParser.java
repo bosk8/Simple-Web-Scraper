@@ -1,5 +1,11 @@
 package com.example.scraper.core.parser;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 import com.example.scraper.model.ScrapedData;
 import com.example.scraper.model.DataSelectors;
 import org.jsoup.Jsoup;
@@ -8,12 +14,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 
 /**
  * HTML parser using jsoup for extracting data with CSS selectors.

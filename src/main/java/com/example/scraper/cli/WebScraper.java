@@ -1,20 +1,18 @@
 package com.example.scraper.cli;
 
-import com.example.scraper.core.http.HttpFetcher;
-import com.example.scraper.core.parser.HtmlParser;
-import com.example.scraper.core.persistence.CSVWriter;
-import com.example.scraper.core.persistence.JSONLWriter;
-import com.example.scraper.core.robots.RobotsTxtCompliance;
-import com.example.scraper.model.DataSelectors;
-import com.example.scraper.model.ScrapedData;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.net.http.HttpClient;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+
+import com.example.scraper.core.http.HttpFetcher;
+import com.example.scraper.core.parser.HtmlParser;
+import com.example.scraper.core.robots.RobotsTxtCompliance;
+import com.example.scraper.model.DataSelectors;
+import com.example.scraper.model.ScrapedData;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Main scraper class that orchestrates the web scraping process.

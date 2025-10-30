@@ -1,19 +1,15 @@
 package com.example.scraper.cli;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+
 import com.example.scraper.core.persistence.CSVWriter;
 import com.example.scraper.core.persistence.JSONLWriter;
 import com.example.scraper.model.DataSelectors;
 import com.example.scraper.model.ScrapedData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
 
 /**
  * Command-line interface for the web scraper.
