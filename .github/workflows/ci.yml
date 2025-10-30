@@ -29,6 +29,10 @@ jobs:
     - name: Run tests
       run: mvn clean test
       
+    - name: Run Checkstyle
+      run: mvn checkstyle:check
+      continue-on-error: true
+      
     - name: Build project
       run: mvn clean package
       
